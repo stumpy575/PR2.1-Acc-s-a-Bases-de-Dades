@@ -1,12 +1,12 @@
 ﻿# run.ps1 - Compila el projecte (codi i tests) i executa una classe principal amb Maven.
 #
 # Ús:   .\run.ps1 [classe.principal] [param1] [param2] ...
-#       Si no s'indica la classe principal, s'executa cat.iesesteveterradas.Main
+#       Si no s'indica la classe principal, s'executa cat.iesesteveterradas.PR210LoL
 #
 # Exemples:
 #       .\run.ps1
-#       .\run.ps1 cat.iesesteveterradas.Main
-#       .\run.ps1 cat.iesesteveterradas.Main param1 "param amb espais"
+#       .\run.ps1 cat.iesesteveterradas.PR210LoL
+#       .\run.ps1 cat.iesesteveterradas.PR210LoL param1 "param amb espais"
 
 # Ens situem a la carpeta de l'script (l'arrel del projecte)
 Set-Location $PSScriptRoot
@@ -19,7 +19,7 @@ $env:MAVEN_OPTS = "--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.
 if ($args.Count -gt 0) {
     $mainClass = $args[0]
 } else {
-    $mainClass = "cat.iesesteveterradas.Main"
+    $mainClass = "cat.iesesteveterradas.PR210LoL"
 }
 
 # Paràmetres del programa (tots menys el primer).
